@@ -13,7 +13,7 @@ public interface ProfesorService
     // Consultar un alumno por ID
     Optional<Profesor> findById(Long id);
     // Guardar o actualizar un alumno
-    Profesor save(Profesor alumno);
+    Profesor save(Profesor profesor);
     // Eliminar un alumno por ID
     void deleteById(Long id);
     // Verificar si existe un alumno

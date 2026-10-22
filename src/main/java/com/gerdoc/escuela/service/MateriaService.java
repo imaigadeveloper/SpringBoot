@@ -13,7 +13,7 @@ public interface MateriaService
     // Consultar un alumno por ID
     Optional<Materia> findById(Long id);
     // Guardar o actualizar un alumno
-    Materia save(Materia alumno);
+    Materia save(Materia materia);
     // Eliminar un alumno por ID
     void deleteById(Long id);
     // Verificar si existe un alumno
