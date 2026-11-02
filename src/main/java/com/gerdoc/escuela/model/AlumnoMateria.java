@@ -1,10 +1,17 @@
 package com.gerdoc.escuela.model;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
 
 @Data
 @Entity
@@ -12,10 +19,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Table(name = "ALUMNO_MATERIA")
-public class AlumnoMateria
-{
+public class AlumnoMateria {
+
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
 
@@ -27,7 +34,7 @@ public class AlumnoMateria
     @JoinColumn(name = "MATERIA_ID")
     private Materia materia;
 
-    @ManyToOne
-    @JoinColumn(name = "CALIFICACION")
-    private Calificacion calificacion;
+    @Column(name = "CALIFICACION")
+    private Double calificacion;
+
 }
