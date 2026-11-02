@@ -12,6 +12,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+import java.math.BigDecimal; // Importar BigDecimal
 
 @Data
 @Entity
@@ -35,6 +36,6 @@ public class AlumnoMateria {
     private Materia materia;
 
     @Column(name = "CALIFICACION")
-    private Double calificacion;
+    private BigDecimal calificacion;
 
 }
